@@ -2,7 +2,11 @@ import ChampHeaders from "./ChampHeader";
 import ChampIcon from "./ChampIcon";
 import ChampSlideshow from "./ChampSlideshow";
 
-export default function ChampOverview({ allPictureLinks, champName }) {
+export default function ChampOverview({
+  allPictureLinks,
+  champName,
+  handleImageClick,
+}) {
   return (
     <div className="champOverview">
       <div className="nameIconDiv">
@@ -11,7 +15,10 @@ export default function ChampOverview({ allPictureLinks, champName }) {
         />
         <ChampIcon ogPicture={allPictureLinks.og} />
       </div>
-      <ChampSlideshow allPictureLinks={allPictureLinks} />
+      <ChampSlideshow
+        allPictureLinks={allPictureLinks}
+        handleImageClick={(link, keyName) => handleImageClick(link, keyName)}
+      />
     </div>
   );
 }

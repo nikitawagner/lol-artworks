@@ -1,10 +1,13 @@
+import { useState } from "react";
 import ChampAllOverview from "../champOverview/ChampAllOverview";
+import ImageModal from "../modals/ImageModal";
 import "./Landingpage.css";
 
 export default function Landingpage() {
   const champAllData = {
     aatrox: {
-      og: "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg",
+      default:
+        "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg",
       jukistar:
         "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_1.jpg",
       mecha:
@@ -18,7 +21,8 @@ export default function Landingpage() {
     },
 
     ahri: {
-      og: "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_0.jpg",
+      default:
+        "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_0.jpg",
       dynastie:
         "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_1.jpg",
       fuchsfeuer:
@@ -50,14 +54,16 @@ export default function Landingpage() {
         "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_66.jpg",
     },
     akshan: {
-      og: "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt58b3304a9d38b091/60f5d6e21929bc58854d00a6/072221_AkshanChampionTheme_Banner.jpg?quality=90&width=1215",
+      default:
+        "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt58b3304a9d38b091/60f5d6e21929bc58854d00a6/072221_AkshanChampionTheme_Banner.jpg?quality=90&width=1215",
       cyberpop:
         "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Akshan_1.jpg",
       kristallrose:
         "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Akshan_10.jpg",
     },
     akali: {
-      og: "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Akali_0.jpg",
+      default:
+        "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Akali_0.jpg",
       stechende:
         "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Akali_1.jpg",
       infernal:
@@ -91,7 +97,8 @@ export default function Landingpage() {
         "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Akali_61.jpg",
     },
     alistar: {
-      og: "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Alistar_0.jpg",
+      default:
+        "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Alistar_0.jpg",
       schwarz:
         "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Alistar_1.jpg",
       golden:
@@ -122,7 +129,8 @@ export default function Landingpage() {
         "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Alistar_29.jpg",
     },
     amumu: {
-      og: "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Amumu_0.jpg",
+      default:
+        "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Amumu_0.jpg",
       pharao:
         "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Amumu_1.jpg",
       vancouver:
@@ -149,7 +157,8 @@ export default function Landingpage() {
         "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Amumu_34.jpg",
     },
     anivia: {
-      og: "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Anivia_0.jpg",
+      default:
+        "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Anivia_0.jpg",
       friedensphoenix:
         "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Anivia_1.jpg",
       raubvogel:
@@ -174,7 +183,8 @@ export default function Landingpage() {
         "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Anivia_37.jpg",
     },
     annie: {
-      og: "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Annie_0.jpg",
+      default:
+        "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Annie_0.jpg",
       gothic:
         "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Annie_1.jpg",
       rotkaeppchen:
@@ -207,7 +217,8 @@ export default function Landingpage() {
         "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Annie_31.jpg",
     },
     aphelios: {
-      og: "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aphelios_0.jpg",
+      default:
+        "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aphelios_0.jpg",
       flammendeFinsternis:
         "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aphelios_1.jpg",
       mondzodiak:
@@ -217,7 +228,8 @@ export default function Landingpage() {
         "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aphelios_20.jpg",
     },
     ashe: {
-      og: "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ashe_0.jpg",
+      default:
+        "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ashe_0.jpg",
       freljord:
         "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ashe_1.jpg",
       sherwoodForest:
@@ -247,7 +259,8 @@ export default function Landingpage() {
         "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ashe_43.jpg",
     },
     aurelionSol: {
-      og: "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/AurelionSol_0.jpg",
+      default:
+        "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/AurelionSol_0.jpg",
       aschfahlerFuerst:
         "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/AurelionSol_1.jpg",
       mecha:
@@ -256,7 +269,8 @@ export default function Landingpage() {
         "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/AurelionSol_11.jpg",
     },
     azir: {
-      og: "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Azir_0.jpg",
+      default:
+        "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Azir_0.jpg",
       galaktischer:
         "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Azir_1.jpg",
       grabesfuerst:
@@ -271,7 +285,8 @@ export default function Landingpage() {
         "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Azir_14.jpg",
     },
     bard: {
-      og: "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_0.jpg",
+      default:
+        "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_0.jpg",
       ahnenholz:
         "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_1.jpg",
       schneetag:
@@ -284,12 +299,14 @@ export default function Landingpage() {
         "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_17.jpg",
     },
     belveth: {
-      og: "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Belveth_0.jpg",
+      default:
+        "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Belveth_0.jpg",
       schlachtboss:
         "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Belveth_1.jpg",
     },
     blitzcrank: {
-      og: "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Blitzcrank_0.jpg",
+      default:
+        "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Blitzcrank_0.jpg",
       rostiger:
         "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Blitzcrank_1.jpg",
       torwart:
@@ -318,7 +335,8 @@ export default function Landingpage() {
         "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Blitzcrank_47.jpg",
     },
     brand: {
-      og: "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Brand_0.jpg",
+      default:
+        "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Brand_0.jpg",
       apokalyptischer:
         "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Brand_1.jpg",
       vandalen:
@@ -341,7 +359,8 @@ export default function Landingpage() {
         "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Brand_22.jpg",
     },
     braum: {
-      og: "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Braum_0.jpg",
+      default:
+        "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Braum_0.jpg",
       drachentoeter:
         "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Braum_1.jpg",
       elTigre:
@@ -358,7 +377,8 @@ export default function Landingpage() {
         "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Braum_33.jpg",
     },
     caitlyn: {
-      og: "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_0.jpg",
+      default:
+        "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_0.jpg",
       widerstands:
         "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_1.jpg",
       sheriff:
@@ -391,7 +411,8 @@ export default function Landingpage() {
         "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_30.jpg",
     },
     camille: {
-      og: "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Camille_0.jpg",
+      default:
+        "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Camille_0.jpg",
       programm:
         "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Camille_1.jpg",
       hexenzirkel:
@@ -403,43 +424,44 @@ export default function Landingpage() {
         "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Camille_21.jpg",
     },
     cassiopeia: {
-      og: "",
+      default: "",
     },
     chogath: {
-      og: "",
+      default: "",
     },
     corki: {
-      og: "",
+      default: "",
     },
     darius: {
-      og: "",
+      default: "",
     },
     diana: {
-      og: "",
+      default: "",
     },
     drMundo: {
-      og: "",
+      default: "",
     },
     draven: {
-      og: "",
+      default: "",
     },
     ekko: {
-      og: "",
+      default: "",
     },
     elise: {
-      og: "",
+      default: "",
     },
     evelynn: {
-      og: "",
+      default: "",
     },
     ezrael: {
-      og: "",
+      default: "",
     },
     fiddlesticks: {
-      og: "",
+      default: "",
     },
     lux: {
-      og: "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lux_0.jpg",
+      default:
+        "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lux_0.jpg",
       zauberin:
         "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lux_1.jpg",
       zauberdieb:
@@ -477,9 +499,29 @@ export default function Landingpage() {
     },
   };
 
+  const [show, setShow] = useState(false);
+  const [skinName, setSkinName] = useState("");
+  const [skinLink, setSkinLink] = useState("");
+
+  function handleImageClick(link, keyName) {
+    setSkinLink(link);
+    setSkinName(keyName);
+    setShow(true);
+  }
+
   return (
     <>
-      <ChampAllOverview champAllData={champAllData} />
+      <ChampAllOverview
+        champAllData={champAllData}
+        handleImageClick={(link, keyName) => handleImageClick(link, keyName)}
+      />
+      <ImageModal
+        clickedImage={null}
+        show={show}
+        setShow={(value) => setShow(value)}
+        skinLink={skinLink}
+        skinName={skinName}
+      />
     </>
   );
 }
