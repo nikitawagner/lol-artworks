@@ -1,11 +1,14 @@
 import ChampOverview from "./ChampOverview";
+import "./ChampOverview.css";
 
 export default function ChampAllOverview({ champAllData }) {
-    return (
-        <div className="champPic">
-        {Object.keys(champAllData).map((key, index) => {
-          return <ChampOverview allPictureLinks={champAllData[key]} />;
-        })}
-      </div>
-    )
+  return (
+    <div className="containerAllChampOverview">
+      {Object.keys(champAllData).map((key, index) => {
+        return (
+          <ChampOverview allPictureLinks={champAllData[key]} key={index} champName={ key }/>
+        );
+      })}
+    </div>
+  );
 }

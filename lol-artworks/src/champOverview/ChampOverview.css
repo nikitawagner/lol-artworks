@@ -1,0 +1,100 @@
+.containerAllChampOverview {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.champOverview {
+    width: 80%;
+    background-color: #808080;
+    height: 150px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 10px;
+    border-radius: 10px;
+    min-width: 400px;
+}
+
+.slideshow {
+    display: grid;
+    grid-auto-flow: column;
+
+    
+    overflow-x: auto;
+    overflow-y: hidden;
+    
+}
+
+
+.imageContainer img {
+    padding: 10px;
+    inline-size: 200px;
+    border-radius: 30px;
+}
+
+.iconPicture img {
+    padding: 10px;
+    inline-size: 100px;
+    border-radius: 30px;
+}
+
+.iconPicture {
+    align-items: flex-start;
+}
+
+.nameIconDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 170px;
+    max-width: 170px;
+    height: 80px;
+    margin: 10px;
+    border-radius: 15px;
+    transition: background-color 1s;
+    
+}
+
+.nameIconDiv:hover {
+    
+    background-color: #787878;
+    cursor: pointer;
+}
+
+.champName {
+    overflow-wrap: break-word;
+    text-transform: capitalize;
+    font-size: 40px;
+    font-weight: 500;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    color: white;
+    transition: transform 2s;
+}
+
+.champName:hover {
+    transform: scale(1.1);
+}
+
+
+
+::-webkit-scrollbar {
+    width: 0.5em;
+    height: 0.5em;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(95, 95, 95);
+    margin-left: .5em;
+    margin-right: .5em;
+    border-radius: 10px;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(53, 53, 53);
+    border-radius: 10px;
+}
+
