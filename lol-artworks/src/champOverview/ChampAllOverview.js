@@ -11,7 +11,9 @@ export default function ChampAllOverview({ champAllData, handleImageClick }) {
               allPictureLinks={champAllData[key]}
               key={index}
               champName={key}
-              handleImageClick={(link, keyName) => handleImageClick(link, keyName)}
+              handleImageClick={(link, keyName) =>
+                handleImageClick(link, keyName)
+              }
             />
           </>
         );
